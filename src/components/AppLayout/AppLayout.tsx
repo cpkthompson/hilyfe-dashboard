@@ -14,9 +14,8 @@ import React from "react";
 import SVG from "react-inlinesvg";
 import { FormattedMessage, useIntl } from "react-intl";
 import useRouter from "use-react-router";
-
-import saleorDarkLogoSmall from "@assets/images/logo-dark-small.svg";
-import saleorDarkLogo from "@assets/images/logo-dark.svg";
+// import saleorDarkLogoSmall from "@assets/images/logo-dark-small.svg";
+// import saleorDarkLogo from "@assets/images/logo-dark.svg";
 import menuArrowIcon from "@assets/images/menu-arrow-icon.svg";
 import { createConfigurationMenu } from "@saleor/configuration";
 import useAppState from "@saleor/hooks/useAppState";
@@ -367,14 +366,6 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
               open={isDrawerOpened}
               small={!isMenuSmall}
             >
-              <div
-                className={classNames(classes.logo, {
-                  [classes.logoSmall]: isMenuSmall,
-                  [classes.logoDark]: isDark
-                })}
-              >
-                <SVG src={isMenuSmall ? saleorDarkLogoSmall : saleorDarkLogo} />
-              </div>
               <Hidden smDown>
                 <div
                   className={classNames(classes.isMenuSmall, {
